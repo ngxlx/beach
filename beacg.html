@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+	<title>Marine debris in Singapore</title>
+	
+	<link rel="stylesheet" href="style/css1.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Exo|Red+Hat+Display">
+	
+	<style>
+		body{
+			font-family: "Exo", "Red Hat Display", Segoe, "sans-serif";*/;
+			font-size: 14px;
+			text-align: justified;
+			text-align: center; 
+		}
+		
+		#responsive-image {  
+			width: 100%;  
+			height: auto; 
+		} 
+		
+		.container {
+			position: relative;
+			text-align: center;
+/*			color: black;*/
+		}
+		
+		.centered {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			font-size: 60px;
+			font-weight: bold;
+			color: black;
+		}
+
+	</style>
+	
+</head>
+	
+
+<body>
+	<section>
+		<div class="container">
+			<img src="image/barrel.jpg" id="responsive-image">
+			<div class="centered"><h2>It's such a lovely sight</h2></div>
+			
+		</div>
+		
+		
+	</section>
+	
+	<div class="intro1">
+		<video src="image/barrel.mp4"></video>
+		<h1>Not anymore</h1>
+	</div>
+	
+	<section>
+		<h1>Singapore Coastal Project</h1>
+	</section>
+
+<!-- -----Libraries------ -->
+
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js" integrity="sha256-2p2tRZlPowp3P/04Pw2rqVCSbhyV/IB7ZEVUglrDS/c=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.js" integrity="sha256-peenofh8a9TIqKdPKIeQE7mJvuwh+J0To7nslvpj1jI=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.js" integrity="sha256-31FC/OT6XpfjAhj9FuXjw5/wPXXawCAjJQ29E23/XPk="	crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"	integrity="sha256-lPE3wjN2a7ABWHbGz7+MKBJaykyzqCbU96BJWjio86U=" crossorigin="anonymous"></script>
+	<script src="app.js"></script>
+	
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="description" content="Scrollama: Sticky Side Example" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<style>
+			#scrolly {
+				position: relative;
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				background-color: #f3f3f3;
+				padding: 1rem;
+			}
+
+			#scrolly > * {
+				-webkit-box-flex: 1;
+				-ms-flex: 1;
+				flex: 1;
+			}
+
+			article {
+				position: relative;
+				padding: 0 1rem;
+				max-width: 20rem;
+			}
+
+			.sticky-thing {
+				position: -webkit-sticky;
+				position: sticky;
+				width: 100%;
+				margin: 0;
+				background-color: #8a8a8a;
+				z-index: 0;
+				top: 12.5vh;
+				height: 75vh;
+				/* Center everything inside */
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				background-image: url("https://static1.straitstimes.com.sg/s3fs-public/styles/large30x20/public/articles/2019/05/29/lwx_trash3_290519_23.jpg?VersionId=t8p56sb1kl_jXURaGh9xqugiqXySzkWD&itok=D_d-WDRR") ;
+
+				background-size: cover;
+			}
+
+			.sticky-thing p {
+				padding: 1rem;
+				font-size: 8rem;
+				font-weight: 90;
+				color: #fff;
+			}
+
+			.step {
+				margin: 0 auto 2rem auto;
+				background-color: #3b3b3b;
+				color: #fff;
+
+			}
+
+			.step:last-child {
+				margin-bottom: 0;
+			}
+
+			.step.is-active {
+				background-color: goldenrod;
+				color: #3b3b3b;
+			}
+
+			.step p {
+				text-align: center;
+				padding: 1rem;
+				font-size: 1.5rem;
+			}
+			</style>
+	</head>
+
+	<body>
+
+		<main>
+
+			<section id="scrolly">
+
+				<article>
+				<div class="step" data-step="Why">
+					<video controls src="https://youtu.be/7v7WLPmRJa8"></video>	
+				</div>
+				<div class="step"  data-step="How">
+						<p>How harmful is marine debris to organisms?</p>
+						<ul><a href="https://www.straitstimes.com/singapore/politics/parliament-two-year-study-underway-to-look-into-marine-litter-and-microplastics">Two-year study under way to look into marine litter and microplastics in S'pore waters</a></ul>
+				</div>
+				<div class="step" data-step="Who">
+						<p>Who keeps our beaches clean?</p>
+						<ul><a href="https://www.straitstimes.com/singapore/environment/working-to-keep-singapores-beaches-clean">Working to keep Singapore's beaches clean</a></ul>
+
+						<ul><a href="https://www.straitstimes.com/singapore/singapores-beaches-cleaned-twice-a-day-during-monsoon-seasons">Parliament: Singapore's beaches cleaned twice a day during monsoon seasons, says Grace Fu</a></ul>
+
+						<ul><a href="https://www.straitstimes.com/singapore/environment/agencies-volunteers-step-up-cleaning-efforts-as-monsoon-season-brings-more">Agencies, volunteers step up cleaning efforts as monsoon season brings more trash to S'pore's southern coastlines&nbsp;</a></ul>
+
+				<ul><a href="https://www.straitstimes.com/singapore/ocean-paddlers-clear-singapore-coastline-of-trash-in-cleanup">Ocean paddlers clear Singapore coastline of trash in cleanup</a></ul>
+
+				</div>
+				<div class="step" data-step="How">
+					<p>How bad is the marine debris situation at the beaches?</p>
+					<ul><a href="https://www.youtube.com/watch?v=G7nyMHJxGmI">Singapore is full of trash! | SG Checks</a></ul>
+
+					<ul><a href="https://www.straitstimes.com/singapore/long-stretch-of-trash-found-along-east-coast-park">Long stretch of trash found along beach at East Coast Park&nbsp;</a></ul>
+			</div>
+				</article>
+
+			
+				<div class="sticky-thing">
+					<p>0</p>
+				  </div>
+			</section>
+
+			<section id="outro">
+				
+			
+			</section>
+
+		</main>
+
+	<!-- <div class='debug'></div> -->
+
+		<script src="https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js"></script>
+		<script src="https://unpkg.com/scrollama"></script>
+
+		<script>
+			// using d3 for convenience
+			var main = document.querySelector("main");
+			var scrolly = main.querySelector("#scrolly");
+			var sticky = scrolly.querySelector(".sticky-thing");
+			var article = scrolly.querySelector("article");
+			var steps = article.querySelectorAll(".step");
+
+			// initialize the scrollama
+			var scroller = scrollama();
+
+			// scrollama event handlers
+			function handleStepEnter(response) {
+			// response = { element, direction, index }
+			var el = response.element;
+
+			// remove is-active from all steps
+			// then add is-active to this step
+			steps.forEach(step => step.classList.remove('is-active'));
+			el.classList.add('is-active');
+
+			// update graphic based on step
+			sticky.querySelector("p").innerText = el.dataset.step;
+			}
+
+			function init() {
+				scroller.setup({
+						step: "#scrolly article .step",
+						offset: 0.1,
+						debug: true
+				})
+			.onStepEnter(handleStepEnter);
+
+			// setup resize event
+			window.addEventListener("resize", scroller.resize);
+			}
+
+			// kick things off
+			init();
+
+		</script>
+		
+		<div class="flourish-embed flourish-bar-chart-race" data-src="visualisation/9610556">
+			<script src="https://public.flourish.studio/resources/embed.js"></script>
+		</div>
+		
+		<iframe src="bar.html" width="800" height="1000" frameBorder="0"></iframe>
+
+	</body>
+	
+</body>
+</html>
