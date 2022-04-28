@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>SG coastial</title>
+  </head>
+  <body>
+    <div class="intro">
+      <h1>SG coastal</h1>
+      <video src="Barrel.mp4"></video>
+    </div>
+    <section>
+      <h1>Why coastal beach?</h1>
+    </section>
+    <!--add Leaflet CSS-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css"
+    integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
+    crossorigin=""/>
+  
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"
+      integrity="sha256-2p2tRZlPowp3P/04Pw2rqVCSbhyV/IB7ZEVUglrDS/c="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.js"
+      integrity="sha256-peenofh8a9TIqKdPKIeQE7mJvuwh+J0To7nslvpj1jI="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.js"
+      integrity="sha256-31FC/OT6XpfjAhj9FuXjw5/wPXXawCAjJQ29E23/XPk="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"
+      integrity="sha256-lPE3wjN2a7ABWHbGz7+MKBJaykyzqCbU96BJWjio86U="
+      crossorigin="anonymous"
+    ></script>
+    <script src="app.js"></script>
+    <head>
+      <meta charset="utf-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="description" content="Scrollama: Sticky Side Example" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <link rel="stylesheet" href="styl1.css" />
+      <style>
+        #scrolly {
+          position: relative;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          background-color: #f3f3f3;
+          padding: 1rem;
+        }
+  
+        #scrolly > * {
+          -webkit-box-flex: 1;
+          -ms-flex: 1;
+          flex: 1;
+        }
+  
+        article {
+          position: relative;
+          padding: 0 1rem;
+          max-width: 20rem;
+        }
+  
+        .sticky-thing {
+          position: -webkit-sticky;
+          position: sticky;
+          width: 100%;
+          margin: 0;
+          background-color: #8a8a8a;
+          z-index: 0;
+          top: 12.5vh;
+          height: 75vh;
+          /* Center everything inside */
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-image: url('eastcoast.jpg') ;
+  
+          background-size: cover;
+        }
+  
+        .sticky-thing p {
+          padding: 1rem;
+          font-size: 8rem;
+          font-weight: 900;
+          color: #fff;
+        }
+  
+        .step {
+          margin: 0 auto 2rem auto;
+          background-color: #3b3b3b;
+          color: #fff;
+         
+        }
+  
+        .step:last-child {
+          margin-bottom: 0;
+        }
+  
+        .step.is-active {
+          background-color: goldenrod;
+          color: #3b3b3b;
+        }
+  
+        .step p {
+          text-align: center;
+          padding: 1rem;
+          font-size: 1.5rem;
+        }
+
+
+        body, html {
+        height: 90%;
+      }
+      #map-container {
+        height: 100%;
+      }
+      .img {
+      position: relative;
+    max-width: 100%;
+    
+}
+h2 { 
+   position: absolute; 
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 80px;
+  color: white;
+}
+
+      </style>
+    </head>
+  
+    <body>
+         <!--The div in which the map will be created-->
+  
+    
+    <!--load leaflet.js-->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"
+    integrity="sha512-/Nsx9X4HebavoBvEBuyp3I7od5tA0UzAxs+j83KgC8PU0kgB4XiK4Lfe4y4cgBtaRJQEIFCW+oC506aPT2L1zw=="
+    crossorigin=""></script>
+
+    <!--we need the topojson library as well-->
+    <script src="https://unpkg.com/topojson@3.0.2/dist/topojson.min.js"></script>
+      <main>
+  
+      
+  
+        <section id="scrolly">
+          <article>
+            <div class="step" data-step="Why">
+              <p>Why coastial cleaning *insert text here*</p>
+            </div>
+            <div class="step"  data-step="Why">
+              <p>Why coastial cleaning *insert text here*</p>
+            </div>
+            <div class="step" data-step="Why">
+              <p>Why coastial cleaning *insert text here*</p>
+            </div>
+            <div class="step" data-step="Why">
+              <p>Why coastial cleaning *insert text here*Why coastial cleaning *insert text here*Why coastial cleaning *insert text here*Why coastial cleaning *insert text here*Why coastial cleaning *insert text here*Why coastial cleaning *insert text here*Why coastial cleaning *insert text here*Why coastial cleaning *insert text here*</p>
+            </div>
+          </article>
+  
+          <div class="sticky-thing">
+            <p>0</p>
+          </div>
+      
+        </section>
+  
+        <section id="outro"></section>
+      </main>
+      <div class="flourish-embed flourish-bar-chart-race" data-src="visualisation/9610556"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+      <div id="map-container"></div>
+      <div class="flourish-embed flourish-chart" data-src="visualisation/9633193"style="width:48%; display: inline-block; vertical-align: top;"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+      <div class="flourish-embed flourish-chart" data-src="visualisation/9634080"style="width:48%; display: inline-block; vertical-align: top;"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+      <div class="flourish-embed flourish-chart" data-src="visualisation/9634239"style="width:48%; display: inline-block; vertical-align: top;"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+      <div class="flourish-embed flourish-chart" data-src="visualisation/9634357"style="width:48%; display: inline-block; vertical-align: top;"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+  
+      <!-- <div class='debug'></div> -->
+      
+      <script src="https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js"></script>
+      <script src="https://unpkg.com/scrollama"></script>
+      <script>
+        // using d3 for convenience
+        var main = document.querySelector("main");
+        var scrolly = main.querySelector("#scrolly");
+        var sticky = scrolly.querySelector(".sticky-thing");
+        var article = scrolly.querySelector("article");
+        var steps = article.querySelectorAll(".step");
+  
+        // initialize the scrollama
+        var scroller = scrollama();
+  
+        // scrollama event handlers
+        function handleStepEnter(response) {
+          // response = { element, direction, index }
+          var el = response.element;
+  
+          // remove is-active from all steps
+          // then add is-active to this step
+          steps.forEach(step => step.classList.remove('is-active'));
+          el.classList.add('is-active');
+  
+          // update graphic based on step
+          sticky.querySelector("p").innerText = el.dataset.step;
+        }
+  
+        function init() {
+          scroller
+            .setup({
+              step: "#scrolly article .step",
+              offset: 0.33,
+              debug: false
+            })
+            .onStepEnter(handleStepEnter);
+  
+          // setup resize event
+          window.addEventListener("resize", scroller.resize);
+        }
+  
+        // kick things off
+        init();
+        let map = L.map('map-container',{
+          scrollWheelZoom: false
+        }).setView([1.3521, 103.8198], 11.5);
+      let bglayer_Positron = L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="http://cartodb.com/attributions">CartoDB</a>',
+        subdomains: 'abcd',
+        maxZoom: 19
+      });
+      
+      bglayer_Positron.addTo(map);
+      
+      //extend Leaflet to create a GeoJSON layer from a TopoJSON file
+      L.TopoJSON = L.GeoJSON.extend({
+        addData: function (data) {
+          var geojson, key;
+          if (data.type === "Topology") {
+            for (key in data.objects) {
+              if (data.objects.hasOwnProperty(key)) {
+                geojson = topojson.feature(data, data.objects[key]);
+                L.GeoJSON.prototype.addData.call(this, geojson);
+              }
+            }
+            return this;
+          }
+          L.GeoJSON.prototype.addData.call(this, data);
+          return this;
+        }
+      });
+      L.topoJson = function (data, options) {
+        return new L.TopoJSON(data, options);
+      };
+      //create an empty geojson layer
+      //with a style and a popup on click
+      var geojson = L.topoJson(null, {
+        style: function(feature){
+          return {
+            color: "#000",
+            opacity: 1,
+            weight: 1,
+            fillColor: '#35495d',
+            fillOpacity: 0.8
+          }
+        },
+        onEachFeature: function(feature, layer) {
+          layer.bindPopup('<p>'+feature.properties.name+'</p>')
+        }
+      }).addTo(map);
+      //fill: #317581;
+      //define a function to get and parse geojson from URL
+      async function getGeoData(url) {
+        let response = await fetch(url);
+        let data = await response.json();
+        console.log(data)
+        return data;
+      }
+      
+      //fetch the geojson and add it to our geojson layer
+      getGeoData('https://raw.githubusercontent.com/ngxlx/beach/main/sgbeachdone.topojson').then(data => geojson.addData(data));
+
+       
+    
+      
+      </script>
+  <div class="img">
+  <img style='width: 100%; object-fit: contain' src="clean beach.jpg">
+  <h2>Hopefully?</h2>
+</div>
+  </body>
+</html>
